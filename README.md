@@ -48,6 +48,8 @@ wincrypt.protectData(Buffer.from("test"));
 
 ### With custom flag (only `CRYPTPROTECT_LOCAL_MACHINE` supported)
 
+> INFO: Default flag is `0` ("CurrentUser")
+
 ```js
 wincrypt.protectData(Buffer.from("test"), null, wincrypt.Flags.LocalMachine);
 // or
