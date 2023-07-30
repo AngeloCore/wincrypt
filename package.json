@@ -1,0 +1,49 @@
+{
+  "name": "wincrypt",
+  "version": "1.0.0-1000",
+  "description": "Node.js wrapper around the Windows Data Protection API written in Rust.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "wincrypt",
+    "triples": {
+      "defaults": false,
+      "additional": [
+        "x86_64-pc-windows-msvc"
+      ]
+    }
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.16.2",
+    "@types/node": "^20.4.5",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build && npm run fmt",
+    "build": "napi build --platform --release --js false --dts index.d.ts",
+    "fmt": "prettier --write **.js **.json **.ts && cargo fmt"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 120,
+    "useTabs": false,
+    "endOfLine": "lf",
+    "semi": true,
+    "quoteProps": "as-needed",
+    "trailingComma": "none"
+  },
+  "author": "Angelo II",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngeloCore/wincrypt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AngeloCore/wincrypt/issues"
+  },
+  "homepage": "https://github.com/AngeloCore/wincrypt#readme",
+  "funding": "https://paypal.me/AngeloCore"
+}
