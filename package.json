@@ -1,6 +1,6 @@
 {
   "name": "wincrypt",
-  "version": "1.0.0-stable",
+  "version": "1.1.0",
   "description": "Node.js wrapper around the Windows Data Protection API written in Rust.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -20,7 +20,7 @@
     "prettier": "^3.0.0"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 20"
   },
   "scripts": {
     "prepublishOnly": "npm run build && npm run fmt",
